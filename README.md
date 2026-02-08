@@ -1,4 +1,4 @@
-# Naz Todo - Agentic Todo Application
+# Taskops - Agentic Todo Application
 
 An evolving todo application that progresses through five phases, from a simple console app to a cloud-native AI-powered task management system. Built entirely through spec-driven development with Claude Code and Spec-Kit Plus.
 
