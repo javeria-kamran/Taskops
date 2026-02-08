@@ -15,7 +15,7 @@ export default function HomePage() {
         </Link>
         <Link href="/signup">
           <Button className="bg-[#1653DD] text-white hover:bg-transparent hover:shadow-md border border-[#1653DD] hover:text-[#1653DD]">
-            Sign Up
+            Sign up
           </Button>
         </Link>
       </div>
