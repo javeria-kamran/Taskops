@@ -1,0 +1,31 @@
+"""
+User model for authentication and user management.
+"""
+
+from sqlmodel import SQLModel, Field
+from datetime import datetime
+from typing import Optional
+
+
+class User(SQLModel, table=True):
+    """User model for database."""
+
+    __tablename__ = "users"
+
+    id: str = Field(primary_key=True)
+    email: str = Field(unique=True, index=True, nullable=False)
+    name: Optional[str] = Field(default=None)
+    email_verified: bool = Field(default=False)
+    image: Optional[str] = Field(default=None)
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "id": "user_abc123",
+                "email": "user@example.com",
+                "name": "John Doe",
+                "email_verified": False,
+            }
+        }

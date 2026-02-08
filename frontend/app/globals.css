@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F1F6FF;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .btn-primary {
+    @apply bg-[#1653DD] text-white;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-b from-[#D7E3FF] to-[#7DA4FF];
+  }
+
+  .border-primary {
+    @apply border-[#1653DD];
+  }
+}

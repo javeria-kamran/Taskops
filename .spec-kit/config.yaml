@@ -1,0 +1,67 @@
+name: naz-todo
+version: "2.0"
+description: Agentic Todo Application - Phase II Full-Stack Web App
+
+structure:
+  specs_dir: specs
+  features_dir: specs/features
+  api_dir: specs/api
+  database_dir: specs/database
+  ui_dir: specs/ui
+
+phases:
+  - name: phase1-console
+    description: Console-based todo application with in-memory storage
+    features: [task-crud-console]
+    status: completed
+
+  - name: phase2-web
+    description: Full-stack web application with persistent storage
+    features: [task-crud-web, authentication]
+    status: in_progress
+
+  - name: phase3-chatbot
+    description: AI chatbot interface via MCP tools
+    features: [task-crud-web, authentication, chatbot]
+    status: planned
+
+  - name: phase4-kubernetes
+    description: Local Kubernetes deployment
+    features: [task-crud-web, authentication, chatbot, kubernetes]
+    status: planned
+
+  - name: phase5-cloud
+    description: Cloud-native deployment with Kafka and Dapr
+    features: [task-crud-web, authentication, chatbot, kubernetes, cloud-native]
+    status: planned
+
+tech_stack:
+  frontend:
+    framework: Next.js 16+
+    language: TypeScript
+    styling: Tailwind CSS
+    auth: Better Auth
+
+  backend:
+    framework: FastAPI
+    language: Python 3.13+
+    orm: SQLModel
+    testing: pytest
+
+  database:
+    primary: Neon Serverless PostgreSQL
+
+  infrastructure:
+    containerization: Docker
+    orchestration: Docker Compose
+
+  development:
+    ai_tools: Claude Code
+    spec_framework: Spec-Kit Plus
+    package_manager: UV (Python), npm/pnpm (Node.js)
+
+conventions:
+  api_prefix: /api
+  authentication: JWT tokens via Better Auth
+  error_handling: HTTPException for API, try-catch for frontend
+  code_style: Black (Python), Prettier (TypeScript)
