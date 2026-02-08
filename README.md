@@ -2,16 +2,6 @@
 
 An evolving todo application that progresses through five phases, from a simple console app to a cloud-native AI-powered task management system. Built entirely through spec-driven development with Claude Code and Spec-Kit Plus.
 
-## Current Status
-
-| Phase | Status | Description |
-|-------|--------|-------------|
-| **Phase I** | ✅ COMPLETED | Console application with in-memory storage |
-| **Phase II** | ✅ COMPLETED | Full-stack web app with PostgreSQL & auth |
-| **Phase III** | 📋 PLANNED | AI chatbot with MCP tools |
-| Phase IV | 🔮 FUTURE | Kubernetes deployment |
-| Phase V | 🔮 FUTURE | Cloud-native with Kafka & Dapr |
-
 ## Quick Start
 
 ### Phase I: Console Application (COMPLETED)
@@ -144,7 +134,7 @@ AI:   "Great! I've marked 'Buy groceries' as completed."
 ### Unified Project Structure
 
 ```
-Naz-Todo/
+Tasops/
 ├── specs/                      # Feature specifications (Spec-Kit)
 │   ├── 001-phase1-console-app/ # Phase I specs ✅
 │   ├── 002-phase2-web-app/     # Phase II specs ✅
