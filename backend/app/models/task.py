@@ -66,6 +66,20 @@ class Task(SQLModel, table=True):
         description="Whether task is completed"
     )
 
+    # Task metadata
+    priority: str = Field(
+        default="medium",
+        max_length=20,
+        nullable=False,
+        description="Task priority: high, medium, low"
+    )
+
+    due_date: Optional[datetime] = Field(
+        default=None,
+        nullable=True,
+        description="Optional due date for task"
+    )
+
     # Timestamps (UTC)
     created_at: datetime = Field(
         default_factory=datetime.utcnow,

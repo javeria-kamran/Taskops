@@ -72,6 +72,8 @@ class TaskResponse(BaseModel):
     title: str
     description: Optional[str] = None
     completed: bool
+    priority: str = "medium"
+    due_date: Optional[datetime] = None
     created_at: datetime
     updated_at: datetime
 
@@ -84,6 +86,8 @@ class TaskResponse(BaseModel):
                 "title": "Complete project documentation",
                 "description": "Write comprehensive docs for the new feature",
                 "completed": False,
+                "priority": "high",
+                "due_date": "2024-12-31T23:59:59Z",
                 "created_at": "2024-12-28T10:00:00Z",
                 "updated_at": "2024-12-28T10:00:00Z",
             }
